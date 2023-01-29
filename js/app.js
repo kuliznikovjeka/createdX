@@ -4335,6 +4335,11 @@
           slidesToShow: 4,
           infinite: !0,
           waitForAnimate: !1,
+          responsive: [
+            { breakpoint: 1100, settings: { slidesToShow: 3 } },
+            { breakpoint: 750, settings: { slidesToShow: 2 } },
+            { breakpoint: 550, settings: { slidesToShow: 1 } },
+          ],
         }),
         $(".team__slider-prev").on("click", function (t) {
           t.preventDefault(), $(".team__slider").slick("slickPrev")({});
@@ -4367,6 +4372,9 @@
                 $(".accordeon-program__text").slideUp(),
                 $(this).addClass("accordeon-program__head_active"),
                 $(this).children(".accordeon-program__text").slideDown());
+        }),
+        $(".top-footer__title").on("click", function () {
+          $(this).next().slideToggle();
         });
     }),
       (window.FLS = !0),
